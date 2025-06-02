@@ -95,6 +95,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Dark mode toggle
+  const darkModeToggle = document.getElementById("dark-mode-toggle");
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (localStorage.getItem("darkMode") === "true" || (!localStorage.getItem("darkMode") && prefersDark)) {
+    document.body.classList.add("dark-mode");
+  }
+
+  darkModeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
+  });
+
   // Initialize app
   fetchActivities();
 });

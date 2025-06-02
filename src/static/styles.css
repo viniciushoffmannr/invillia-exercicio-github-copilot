@@ -142,3 +142,76 @@ footer {
   padding: 20px;
   color: #666;
 }
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #181a20;
+  color: #e0e0e0;
+}
+
+body.dark-mode header {
+  background-color: #232946;
+  color: #e0e0e0;
+}
+
+body.dark-mode section {
+  background-color: #232946;
+  color: #e0e0e0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .activity-card {
+  background-color: #232946;
+  border-color: #393e5c;
+}
+
+body.dark-mode input,
+body.dark-mode select {
+  background-color: #181a20;
+  color: #e0e0e0;
+  border-color: #393e5c;
+}
+
+body.dark-mode button {
+  background-color: #393e5c;
+  color: #e0e0e0;
+}
+
+body.dark-mode button:hover {
+  background-color: #232946;
+}
+
+body.dark-mode .success {
+  background-color: #244b2f;
+  color: #b9f6ca;
+  border-color: #388e3c;
+}
+
+body.dark-mode .error {
+  background-color: #4b2323;
+  color: #ff8a80;
+  border-color: #c62828;
+}
+
+body.dark-mode .info {
+  background-color: #23394b;
+  color: #b3e5fc;
+  border-color: #0288d1;
+}
+
+#dark-mode-toggle {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.2s;
+  z-index: 10;
+}
+
+body.dark-mode #dark-mode-toggle {
+  color: #ffd700;
+}
